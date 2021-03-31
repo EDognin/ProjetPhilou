@@ -37,20 +37,9 @@ class XylophoneApp extends StatelessWidget {
 
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              buildKey(1),
-              buildKey(2),
-              buildKey(3),
-              buildKey(4),
-              buildKey(5),
-              buildKey(6),
-              buildKey(7)
-            ],
-          ),
+          child: Center(child: Text("Test philou")),
         ),
       ),
     );
