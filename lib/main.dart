@@ -31,7 +31,12 @@ class XylophoneApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var keys = <Text>[];
+    var libelle = <Text>[
+      Text(
+        "NON !!",
+        style: TextStyle(backgroundColor: Colors.teal, color: Colors.white),
+      )
+    ];
 
     // for (var i = 1; i == 7; i++) keys.add(buildKey(i));
 
@@ -44,11 +49,7 @@ class XylophoneApp extends StatelessWidget {
               onPressed: () {
                 playSound(1);
               },
-              child: Text(
-                "NON !",
-                style: TextStyle(
-                    backgroundColor: Colors.teal, color: Colors.white),
-              ),
+              child: libelle[0],
             ),
           ),
         ),
