@@ -16,7 +16,7 @@ class XylophoneApp extends StatelessWidget {
 
   void playSound(int note) {
     final player = AudioCache();
-    player.play('note$note.wav');
+    player.play('non$note.aac');
   }
 
   Expanded buildKey(int note) {
@@ -31,15 +31,26 @@ class XylophoneApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var keys = <Widget>[];
+    var keys = <Text>[];
 
     // for (var i = 1; i == 7; i++) keys.add(buildKey(i));
 
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
         body: SafeArea(
-          child: Center(child: Text("Test philou")),
+          child: Center(
+            child: TextButton(
+              onPressed: () {
+                playSound(1);
+              },
+              child: Text(
+                "NON !",
+                style: TextStyle(
+                    backgroundColor: Colors.teal, color: Colors.white),
+              ),
+            ),
+          ),
         ),
       ),
     );
